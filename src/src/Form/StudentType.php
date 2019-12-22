@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Student;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,6 +15,7 @@ class StudentType extends AbstractType
         $builder
             ->add('studentNo')
             ->add('Name')
+            ->add('save', SubmitType::class)
         ;
     }
 
