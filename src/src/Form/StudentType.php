@@ -4,9 +4,11 @@ namespace App\Form;
 
 use App\Entity\Student;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\PositiveOrZero;
 
 class StudentType extends AbstractType
 {
@@ -15,7 +17,7 @@ class StudentType extends AbstractType
         $builder
             ->add('studentNo')
             ->add('Name')
-            ->add('save', SubmitType::class)
+//            ->add('save', SubmitType::class)
         ;
     }
 

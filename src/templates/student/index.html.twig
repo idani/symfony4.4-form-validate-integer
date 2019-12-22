@@ -17,7 +17,9 @@
         <li>Your template at <code><a href="{{ '/var/www/html/templates/student/index.html.twig'|file_link(0) }}">templates/student/index.html.twig</a></code></li>
     </ul>
 
-    {{ form(form) }}
-
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-lg btn-primary" name="save" type="submit">save2</button>
+    {{ form_end(form) }}
 </div>
 {% endblock %}
